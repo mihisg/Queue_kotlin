@@ -1,0 +1,33 @@
+import java.util.*
+
+fun main(){
+	val hans = Person("Hans")
+	val peter = Person("Peter")
+	val maria = Person("Maria")
+	val gunter = Person("Gunter")
+	val donald = Person("Donald")
+	val petra = Person("Petra")
+	val coll = arrayOf(peter, maria, gunter)
+
+	val schlange = VerweisSchlange<Person>()
+	schlange.add(hans)
+	println(schlange.firstElement)
+	println(schlange.lastElement)
+	schlange.remove()
+	schlange.addAll(coll)
+	schlange.remove()
+	println(schlange.firstElement?.name)
+	println(schlange.lastElement?.name)
+	schlange.add(donald)
+	schlange.add(petra)
+	println(schlange.size)
+	println(schlange.remove().name)
+	println(schlange)
+	println(schlange.size)
+	println(schlange.firstElement?.name)
+	schlange.clear()
+	println(schlange)
+	println(schlange.size)
+	println(schlange.firstElement)
+	println(schlange.lastElement)
+}
